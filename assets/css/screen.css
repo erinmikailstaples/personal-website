@@ -1084,3 +1084,15 @@ hr {
 .gh-copyright {
     font-size: 1.4rem;
 }
+
+
+
+/* Header Alt */
+/* ---------------------------------------------------------- */
+.m-header { background-color:var(--background-color);left:0;position:fixed;top:0;transition:transform .4s cubic-bezier(.165,.84,.44,1);width:100%;will-change:transform;z-index:4}@media only screen and (min-width:48rem){.m-header{padding:15px 0}}
+
+.m-header.mobile-menu-opened {height:100%}@media only screen and (min-width:48rem){.m-header.mobile-menu-opened{height:auto}}.m-header.headroom--pinned{box-shadow:0 4px 8px rgba(0,0,0,.05),0 0 0 transparent;transform:translateY(0)}.m-header.headroom--pinned .m-header__shadow{display:none}.m-header.headroom--unpinned{transform:translateY(-100%)}
+
+.m-header.submenu-is-active{background-color:var(--background-color)}
+
+.m-header.submenu-is-active .m-header__shadow{display:none}.m-header.with-picture{background-color:var(--background-color)}
