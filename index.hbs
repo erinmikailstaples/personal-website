@@ -1,0 +1,111 @@
+{{!< default}}
+
+<head>
+    <script src="https://kit.fontawesome.com/b338ca3cb5.js" crossorigin="anonymous"></script>
+</head>
+
+<section class="gh-about gh-outer{{#match @custom.header_section_layout "!=" "Typographic profile"}}{{#unless @site.cover_image}} no-image{{/unless}}{{else}}{{#unless @site.icon}} no-image{{/unless}}{{/match}}">
+    <div class="gh-about-inner gh-inner">
+        {{#match @custom.header_section_layout "!=" "Typographic profile"}}
+            {{#if @site.cover_image}}
+                <img class="gh-about-image" src="{{@site.cover_image}}" alt="{{@site.title}}">
+            {{/if}}
+        {{else}}
+            {{#if @site.icon}}
+                <img class="gh-about-image" src="{{@site.icon}}" alt="{{@site.title}}">
+            {{/if}}
+        {{/match}}
+        <script>
+            (function () {
+                if (!document.body.classList.contains('has-background-about')) return;
+
+                const about = document.querySelector('.gh-about');
+                if (!about) return;
+
+                const image = about.querySelector('.gh-about-image');
+
+                about.style.setProperty('--about-height', image.clientWidth * image.naturalHeight / image.naturalWidth + 'px');
+                about.classList.add('initialized');
+            })();
+        </script>
+        <div class="gh-about-content">
+            <div class="gh-about-content-inner">
+                {{#if @custom.primary_header}}
+                    <h1 class="gh-about-primary">{{{@custom.primary_header}}}</h1>
+                {{/if}}
+                {{#if @custom.secondary_header}}
+                    <p class="gh-about-secondary">{{{@custom.secondary_header}}}</p>
+                {{/if}}
+                {{#if @site.members_enabled}}
+                    {{#unless @member}}
+                        <div class="gh-subscribe-input" data-portal>
+                            name@youremail.com
+                            <span class="gh-btn gh-primary-btn">subscribe</span>
+                        </div>
+                    {{/unless}}
+                {{/if}}
+            </div>
+
+<!-- Social Icons -->
+<span>
+<!-- Twitter -->
+<a class = "social-twitter" href="https://twitter.com/erinmikail" target="_blank" rel="noreferrer noopener">
+<i class="fa-brands fa-twitter"></i>&nbsp;
+ </a>
+
+ <!-- LinkedIn -->
+  
+<a class = "social-linkedin" href="https://linkedin.com/in/erinmikail" target="_blank" rel="noreferrer noopener">
+<i class="fa-brands fa-linkedin-in"></i>&nbsp;
+</a>
+  
+<!-- Instagram -->
+  
+<a class = "social-instagram" href="https://instagram.com/erinmikail" target="_blank" rel="noreferrer noopener">
+<i class="fa-brands fa-instagram"></i>&nbsp;
+</a>
+  
+<!-- Mastodon -->
+  
+<a class = "social-mastodon" href="https://mastodon.social/@erinmikail" target="_blank" rel="noreferrer noopener">
+<i class="fa-brands fa-mastodon"></i>&nbsp;
+</a>
+
+</span>
+
+<!-- youtube -->
+  
+<a class = "social-youtube" href="https://erin.tube" target="_blank" rel="noreferrer noopener">
+<i class="fa-brands fa-youtube"></i>&nbsp;
+</a>
+
+<!-- comedy -->
+  
+<a class = "social-comedy" href="https://instagram.com/laughdammit.nyc" target="_blank" rel="noreferrer noopener">
+<i class="fa-solid fa-face-grin-tears"></i>&nbsp;
+</a>
+
+<!-- polywork -->
+  
+<a class = "social-polywork" href="https://instagram.com/laughdammit.nyc" target="_blank" rel="noreferrer noopener">
+<i class="fa-solid fa-hammer"></i>&nbsp;
+</a>
+
+</span>
+
+
+<!-- end social icons -->
+
+        </div>
+    </div>
+</section>
+
+<main class="gh-main gh-outer">
+    <div class="gh-feed gh-inner">
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
+    </div>
+</main>
+
+{{#contentFor "body_class"}}{{#match @custom.header_section_layout "Side by side"}} has-side-about{{/match}}{{#match @custom.header_section_layout "Large background"}}{{#if @site.cover_image}} is-head-transparent has-background-about{{else}} has-side-about{{/if}}{{/match}}{{#match @custom.header_section_layout "Typographic profile"}}{{#if @site.icon}} has-typographic-about{{else}} has-side-about{{/if}}{{/match}}{{/contentFor}}
