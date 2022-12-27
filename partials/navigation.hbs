@@ -4,7 +4,7 @@ Also it includes the big submenu.
 --}}
 
 {{#if isSecondary}}
-  <ul class="nav">
+  <ul class="nav" role"menu">
     {{#foreach navigation}}
       <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}">
         <a href="{{url absolute="true"}}">{{label}}</a>
