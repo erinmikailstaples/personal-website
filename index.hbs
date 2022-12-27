@@ -50,6 +50,7 @@
     <div class="gh-feed gh-inner">
         {{#foreach posts}}
             {{> "loop"}}
+            {{tags seperator= " | " prefix="Tagged in:"}}
         {{/foreach}}
     </div>
 </main>
