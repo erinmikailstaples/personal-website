@@ -13,8 +13,10 @@ Also it includes the big submenu.
   </ul>
 {{else}}
   {{#foreach navigation}}
+  <ul>
     <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}">
       <a href="{{url absolute="true"}}">{{label}}</a>
     </li>
+  </ul>  
   {{/foreach}}
 {{/if}}
