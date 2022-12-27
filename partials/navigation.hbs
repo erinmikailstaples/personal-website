@@ -4,7 +4,7 @@ Also it includes the big submenu.
 --}}
 
 {{#if isSecondary}}
-  <ul class="m-secondary-menu">
+  <ul class="nav">
     {{#foreach navigation}}
       <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}">
         <a href="{{url absolute="true"}}">{{label}}</a>
@@ -14,10 +14,10 @@ Also it includes the big submenu.
 {{else}}
   {{#foreach navigation}}
   <ul>
-    <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}">
+    <li class="nav{{slug}}{{#if current}} nav-current{{/if}}">
       <a href="{{url absolute="true"}}">{{label}}</a>
     </li>
   </ul>  
   {{/foreach}}
-  
+
 {{/if}}
