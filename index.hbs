@@ -18,12 +18,9 @@
         <script>
             (function () {
                 if (!document.body.classList.contains('has-background-about')) return;
-
                 const about = document.querySelector('.gh-about');
                 if (!about) return;
-
                 const image = about.querySelector('.gh-about-image');
-
                 about.style.setProperty('--about-height', image.clientWidth * image.naturalHeight / image.naturalWidth + 'px');
                 about.classList.add('initialized');
             })();
@@ -39,14 +36,12 @@
                 {{#if @site.members_enabled}}
                     {{#unless @member}}
                         <div class="gh-subscribe-input" data-portal>
-                            name@youremail.com
-                            <span class="gh-btn gh-primary-btn">subscribe</span>
+                            jamie@example.com
+                            <span class="gh-btn gh-primary-btn">Subscribe</span>
                         </div>
                     {{/unless}}
                 {{/if}}
             </div>
-
-
         </div>
     </div>
 </section>
