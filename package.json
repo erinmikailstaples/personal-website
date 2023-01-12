@@ -1,6 +1,6 @@
 {
-    "name": "Solo",
-    "description": "A Ghost theme",
+    "name": "solo",
+    "description": "a ghost theme",
     "version": "1.0.0",
     "private": true,
     "engines": {
