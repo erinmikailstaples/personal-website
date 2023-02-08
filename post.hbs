@@ -38,10 +38,9 @@
                                 </h4>
                             {{/primary_author}}
                             <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time></div>
-                            
-                            {{#foreach tags}}
-                                <a class="gh-article-tag" href="{{this.url}}" style="--tag-color: {{this.accent_color}}">{{this.name}}</a>
-                            {{/each}}
+                            {{#foreach}}
+                                <a class="gh-article-tag" href="{{tags.url}}" style="--tag-color: {{primary_tag.accent_color}}">{{primary_tag.name}}</a>
+                            {{/foreach}}
                         </div>
                     </aside>
                 </section>
