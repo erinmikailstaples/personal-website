@@ -2,7 +2,7 @@
     "name": "solo",
     "description": "a ghost theme",
     "version": "1.0.0",
-    "private": true,
+    "private": false,
     "engines": {
         "ghost": ">=5.0.0"
     },
