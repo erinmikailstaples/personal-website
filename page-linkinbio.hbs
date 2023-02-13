@@ -1,0 +1,34 @@
+{{!-- This block tells you to load the below into a default template --}}
+{{!< default}}
+
+{{!-- This block tells you this is a post page --}}
+{{#post}}
+
+{{!-- This block tells you hey! Its an article! --}}
+<article class="gh-article {{post_class}}">
+
+    <header class="gh-header gh-canvas">
+        <link rel="stylesheet" type="text/css" href="{{asset "css/newsletter.css"}}" media="screen" />
+            
+            <h1 class="gh-title">{{title}}</h1>
+
+        {{#if custom_excerpt}}
+            <p class="gh-excerpt">{{custom_excerpt}}</p>
+        {{/if}}
+
+        {{#if feature_image}}
+            <figure class="gh-feature-image">
+                <img src="{{feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+                {{#if feature_image_caption}}
+                    <figcaption>{{feature_image_caption}}</figcaption>
+                {{/if}}
+            </figure>
+        {{/if}}
+    </header>
+
+    <div class="gh-content gh-canvas">
+        {{content}}
+    </div>
+
+</article>
+{{/post}}
