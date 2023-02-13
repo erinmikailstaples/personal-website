@@ -6,7 +6,9 @@
     "engines": {
         "ghost": ">=5.0.0"
     },
+    
     "license": "MIT",
+    
     "author": {
         "name": "ghost foundation",
         "email": "hello@ghost.org",
@@ -18,6 +20,7 @@
         "ghost-theme"
     ],
     "docs": "https://solo.ghost.io/about/",
+
     "config": {
         "posts_per_page": 6,
         "image_sizes": {
@@ -40,8 +43,14 @@
                 "width": 2000
             }
         },
+ 
+
+        
         "card_assets": true,
-        "custom": {
+        
+        "custom": 
+        
+            {
             "background_color": {
                 "type": "color",
                 "default": "#ffffff"
@@ -80,7 +89,13 @@
                 "options": ["Classic", "Typographic", "Parallax"],
                 "default": "Classic",
                 "group": "homepage"
+            },
+            "post_template": {
+                "type": "select",
+                "options": ["Default", "Link", "Newsletter"],
+                "group": "page"
             }
+
         }
     },
     "scripts": {
