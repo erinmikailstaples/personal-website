@@ -1,4 +1,9 @@
 @font-face {
+    font-family: Open Sans;
+    src: url("https://fonts.googleapis.com")
+}
+
+@font-face {
     font-family: Manrope;
     font-weight: 100 1000;
     src: url("../fonts/Manrope[wght].woff2") format("woff2-variations");
