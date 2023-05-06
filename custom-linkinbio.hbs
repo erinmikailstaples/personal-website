@@ -1,4 +1,16 @@
 
+{{!--  This page will be a link-in-bio page created from a post page --}}
+
+{{!-- This block loads specific styles for the newsletter page --}}
+{{#contentFor "styles"}}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/newsletter.css"}}" media="screen" />
+{{/contentFor}}
+
+{{!-- This block loads specific scripts for the newsletter page --}}
+{{#contentFor "scripts"}}
+  <script src="{{asset "js/newsletter.js"}}"></script>
+
+
 {{!-- This block tells you this is a post page --}}
 {{#post}}
 

@@ -1,4 +1,8 @@
+{{!-- this is the index page which serves as the homepage of my personal website --}}
+
 {{!< default}}
+
+{{!-- This is the head portion of the website.  Inside a site's head portion; you will load any scripts or connections to stylesheets you might need --}}
 
 <head>
     <script src="https://kit.fontawesome.com/b338ca3cb5.js" crossorigin="anonymous"></script>
@@ -8,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
 </head>
+
+
 
 <section class="gh-about gh-outer{{#match @custom.header_section_layout "!=" "Typographic profile"}}{{#unless @site.cover_image}} no-image{{/unless}}{{else}}{{#unless @site.icon}} no-image{{/unless}}{{/match}}">
     <div class="gh-about-inner gh-inner">
