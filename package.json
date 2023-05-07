@@ -1,3 +1,4 @@
+
 {
     "name": "solo",
     "description": "a ghost theme",
@@ -41,6 +42,11 @@
             },
             "xxl": {
                 "width": 2000
+            },
+        "navigation_layout": {
+            "type": "select",
+            "options": ["Logo on the left", "Logo in the middle", "Stacked"],
+            "default": "Logo on the left"
             }
         },
  
@@ -49,17 +55,9 @@
         "card_assets": true,
         
         "custom": 
-        
+
             {
-            "background_color": {
-                "type": "color",
-                "default": "#ffffff"
-            },
-            "navigation_layout": {
-                "type": "select",
-                "options": ["Logo on the left", "Logo in the middle", "Stacked"],
-                "default": "Logo on the left"
-            },
+
             "typography": {
                 "type": "select",
                 "options": ["Modern sans-serif", "Elegant serif", "Consistent mono"],
@@ -87,7 +85,7 @@
             "post_feed_layout": {
                 "type": "select",
                 "options": ["Classic", "Typographic", "Parallax"],
-                "default": "Classic",
+                "default": "Typographic",
                 "group": "homepage"
             },
             "post_template": {
