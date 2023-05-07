@@ -962,7 +962,7 @@ hr {
 /* Navigation
 /* ---------------------------------------------------------- */
 
-.gh-navigation {
+/* .gh-navigation {
     grid-column: 1 / span 12;
     font-size: clamp(2rem, 1.7rem + 0.9375vw, 3.2rem);
     font-weight: 800;
@@ -975,6 +975,50 @@ hr {
 
 .has-mono-font .gh-navigation {
     font-family: var(--font-mono);
+} */
+
+.gh-navigation {
+    grid-column: wide-start / wide-end;
+}
+
+.gh-navigation > div {
+    align-items: flex-start;
+    height: 100%;
+}
+
+.gh-navigation-link {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.gh-navigation-next .gh-navigation-link {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.gh-navigation-previous svg {
+    margin-left: -2px;
+}
+
+.gh-navigation-next svg {
+    margin-right: -2px;
+}
+
+.gh-navigation-label {
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.8;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+}
+
+.gh-navigation-title {
+    margin-top: 0.8rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0;
 }
 
 /* Comments
